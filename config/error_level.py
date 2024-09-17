@@ -32,9 +32,14 @@ class error_level:
     'permission_denied' : 'warning',
     'key_limit_exceeded' : 'info',
     'user_already_exists' : 'warning',
-    'unspoken_audio' : 'warning',
-    'lecture_already_recorded' : 'warning',
-    'already_accessed_accesstoken':'warning',
+    'slot_not_found' : 'info',
+    'user_not_found' : 'error',
+    'refund_initiation_failed' : 'error',
+    'payment_failed' : 'error',
+    'booking_time_expired' : 'warning',
+    'already_booked' : 'info',
+    'slot_full' : 'info',
+    'slot_already_got_booked' : 'info',
 }
 
 

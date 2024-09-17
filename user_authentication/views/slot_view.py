@@ -48,7 +48,7 @@ class SlotCreateView(generics.CreateAPIView):
                         self.errors = cu_queryset.errors
                         code = 'field_error'
                 else:
-                    code = 'slot_booked'
+                    code = 'slot_full'
             
         except ParseError:
            code = 'json_parse_error'
@@ -116,9 +116,9 @@ class ReserveSlotView(generics.CreateAPIView):
                         if cp :
                             if confirmed_bookings >= slot.total_slots:
                                 rp = refund_payment()
-                                code = 'refund_initation_failed'
+                                code = 'refund_initiation_failed'
                                 if rp:
-                                    code = 'refund_initated'
+                                    code = 'refund_initiated'
                             else:
                                 booking.is_confirmed = True
                                 booking.save()

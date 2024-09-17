@@ -39,13 +39,12 @@ class error_code:
     'permission_denied' : 'AiV_CUST_ERR_611',
     'key_limit_exceeded' : 'AiV_CUST_ERR_612',
     'user_already_exists' : 'AiV_CUST_ERR_613',
-    'unspoken_audio' : 'AiV_CUST_ERR_614',
-    'lecture_already_recorded' : 'AiV_CUST_ERR_615',
-    'already_accessed_accesstoken' : 'AiV_CUST_ERR_616',
+    'slot_not_found' : 'AiV_CUST_ERR_614',
+    'user_not_found' : 'AiV_CUST_ERR_615',
+    'refund_initiation_failed': 'AiV_CUST_ERR_616',
+    'payment_failed' : 'AiV_CUST_ERR_617',
+    'booking_time_expired' : 'AiV_CUST_ERR_618',
+    'already_booked' : 'AiV_CUST_ERR_619',
+    'slot_full' : 'AiV_CUST_ERR_620',
+    'slot_already_got_booked' : 'AiV_CUST_ERR_621',
     }
-
-
-
-
-
-

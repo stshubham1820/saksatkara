@@ -7,7 +7,7 @@ class UserProfile(models.Model):
     profile_pic = models.ImageField(upload_to='profile-pic/',null=True,blank=True)
 
     '''
-    decimal_places=3: This specifies the number of decimal places allowed for the number. In this case, up to 3 digits after the decimal point are allowed.
+    decimal_places=2: This specifies the number of decimal places allowed for the number. In this case, up to 3 digits after the decimal point are allowed.
 
     max_digits=20: This defines the total number of digits allowed in the number, including both sides of the decimal point.
     
