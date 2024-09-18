@@ -1,15 +1,26 @@
 from rest_framework import serializers
-from assessment.models import Assessment,AssessmentLink,AssessmentSkills
+from assessment.models import Assessment,AssessmentCode,AssessmentSkills
+from user_authentication.serializers import UserSerializer
 
 
-class AssessmentSerializer(serializers.ModelSerializer):
+class AssessmentCreateSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Assessment
         fields = '__all__'
 
-class AssessmentLinkSerializer(serializers.ModelSerializer):
+class AssessmentReadSerializer(serializers.ModelSerializer):
+
+    created_by = UserSerializer(read_only=True)
+    assessment_for = UserSerializer(many=True, read_only=True)
+
     class Meta:
-        model = AssessmentLink
+        model = Assessment
+        fields = '__all__'
+
+class CodeCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AssessmentCode
         fields = '__all__'
 
 
