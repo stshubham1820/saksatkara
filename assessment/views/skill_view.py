@@ -6,16 +6,13 @@ from django.db.models import Prefetch
 from assessment.serializers import SkillSerializer,AssessmentSkillSerializer
 from assessment.models import AssessmentSkills,Assessment
 
-
-
-
 class AssessmentSkillView(GenericAPIView):
 
     serializer_class = SkillSerializer
     cr = CustomResponseHandler 
     data = None
     errors = None
-    app_name = 'user_authentication_user_skill'
+    app_name = 'assessment_skill'
 
     def get(self, request,pk, *args, **kwargs):
         try :
